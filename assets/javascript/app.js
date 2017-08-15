@@ -6,7 +6,7 @@ $(document).ready(function() {
 // ** Variables **
 
 	//remainingTime 
-	var timer = 
+	
 
 	// var for right answers
 
@@ -50,8 +50,11 @@ $(document).ready(function() {
 // ** Game Logic **
 
 	// start timer()
-	setTimeout(thirtySeconds, 30 * 1000);
-	$("#remainingTime").append("remaining time: " + thirtySeconds);
+	var time = 30;
+
+	setTimeout(time, 30 * 1000);
+	time--;
+	$("#remainingTime").append("remaining time: " + time);
 	console.log(setTimeout);
 
 
