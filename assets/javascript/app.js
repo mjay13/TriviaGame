@@ -50,15 +50,50 @@ $(document).ready(function() {
 // ** Game Logic **
 
 	// start timer()
-	var time = 30;
+	// var time = 30;
 
-	setTimeout(time, 30 * 1000);
-	time--;
-	$("#remainingTime").append("remaining time: " + time);
-	console.log(setTimeout);
+	// setTimeout(time, 30 * 1000);
+	// time--;
+	// $("#remainingTime").append("remaining time: " + time);
+	// console.log(setTimeout);
 
 
 	// timeUp()
+
+// ----------------------------------
+
+// ----------------------------------
+// ** Image Slideshow **
+
+	// variables
+var images = ["assets/images/babirusa.jpg", "assets/images/blackdevil.jpg", "assets/images/banteg.jpg", "assets/images/bluebird.jpg", "assets/images/bison.jpg", "assets/images/bobcat.jpg"];
+
+var imageScroll;
+
+var imageCount = 0;
+
+	// functions
+function showImage() {
+	$("#image-holder").html("<img src=" + images[imageCount] + " width='300px'>");
+	console.log("i'm showing the first image");
+}	
+
+function nextImage() {
+	imageCount++;
+
+	setTimeout(startScroll, 1000);
+
+	if (imageCount === images.length) {
+	imageCount = 0;
+	}
+}
+
+function startScroll() {
+	imageScroll = setInterval(nextImage, 1000);
+	console.log("why am i not working?");
+}
+
+showImage();
 
 // ----------------------------------
 }); //end document ready
