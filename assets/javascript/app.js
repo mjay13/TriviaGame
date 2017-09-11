@@ -2,98 +2,153 @@
 
 $(document).ready(function() {
 
-// __________________________________
-// ** Variables **
+    // __________________________________
+    // ** Variables **
 
-	//remainingTime 
-	
+    //remainingTime 
 
-	// var for right answers
+    // trivia object with questions and answers contained within
+    var trivia = [
+        // question one: true
+        {
+            "name": "bison",
+            "options": ["true", "false"],
+            "answer": 0
+        },
+        // question two: false
+        {
+            "name": "banteng",
+            "options": ["true", "false"],
+            "answer": 1
 
-	// var for questions
+        },
+        // question three: false
+        {
+            "name": "blackdevil",
+            "options": ["true", "false"],
+            "answer": 1
 
-	// var for wrong answers
-
-	// empty array for right answers
-
-	// empty array for wrong answers
-
-	// unanswered questions?
-
-// __________________________________
-// ** Functions **
-
-	// on document loading, start timer
-
-
-	// what happens when a radio button is clicked, store the information
-
-	// timeup
-
-	// show stored answers as how many were 1: correct, 2: how many were incorrect, and 3: how many were not answered
-
-		// push right answers to right array
-
-		// push wrong answers to wrong array
-
-		// how to record unanswered questions? if not aswered, push to unanswered quetion array?
-
-	// function timeUp() {
-
-	//         // in the element with an id of time-left add an h2 saying Time's Up!
-	//         // console log done
-	//          $("#remainingTime").append("<h2>your time is up!</h2>");
-//		}
-	
-	//car and animal gifs on rotating loop
-// __________________________________
-// ** Game Logic **
-
-	// start timer()
-	// var time = 30;
-
-	// setTimeout(time, 30 * 1000);
-	// time--;
-	// $("#remainingTime").append("remaining time: " + time);
-	// console.log(setTimeout);
+        },
+        // question four: true
+        {
+            "name": "bluebird",
+            "options": ["true", "false"],
+            "answer": 0
+        },
+        // question five: true
+        {
+            "name": "blackhawk",
+            "options": ["true", "false"],
+            "answer": 0
+        },
+        // question six: false
+        {
+            "name": "babirusa",
+            "options": ["true", "false"],
+            "answer": 1
+        },
+        // question seven: false
+        {
+            "name": "betta",
+            "options": ["true", "false"],
+            "answer": 1
+        },
+        // question eight: true
+        {
+            "name": "bobcat",
+            "options": ["true", "false"],
+            "answer": 0
+        }
+    ];
 
 
-	// timeUp()
 
-// ----------------------------------
+    // var for right answers
 
-// ----------------------------------
-// ** Image Slideshow **
+    // var for questions
 
-	// variables
-var images = ["assets/images/babirusa.jpg", "assets/images/blackdevil.jpg", "assets/images/banteg.jpg", "assets/images/bluebird.jpg", "assets/images/bison.jpg", "assets/images/bobcat.jpg"];
+    // var for wrong answers
 
-var imageScroll;
+    // empty array for right answers
 
-var imageCount = 0;
+    // empty array for wrong answers
 
-	// functions
-function showImage() {
-	$("#image-holder").html("<img src=" + images[imageCount] + " width='300px'>");
-	console.log("i'm showing the first image");
-}	
+    // unanswered questions?
 
-function nextImage() {
-	imageCount++;
+    // __________________________________
+    // ** Functions **
 
-	setTimeout(startScroll, 1000);
+    // on document loading, start timer
 
-	if (imageCount === images.length) {
-	imageCount = 0;
-	}
-}
 
-function startScroll() {
-	imageScroll = setInterval(nextImage, 1000);
-	console.log("why am i not working?");
-}
+    // what happens when a radio button is clicked, store the information
 
-showImage();
+    // timeup
 
-// ----------------------------------
+    // show stored answers as how many were 1: correct, 2: how many were incorrect, and 3: how many were not answered
+
+    // push right answers to right array
+
+    // push wrong answers to wrong array
+
+    // how to record unanswered questions? if not aswered, push to unanswered quetion array?
+
+    // function timeUp() {
+
+    //         // in the element with an id of time-left add an h2 saying Time's Up!
+    //         // console log done
+    //          $("#remainingTime").append("<h2>your time is up!</h2>");
+    //		}
+
+    //car and animal gifs on rotating loop
+    // __________________________________
+    // ** Game Logic **
+
+    // start timer()
+    // var time = 30;
+
+    // setTimeout(time, 30 * 1000);
+    // time--;
+    // $("#remainingTime").append("remaining time: " + time);
+    // console.log(setTimeout);
+
+
+    // timeUp()
+
+    // ----------------------------------
+
+    // ----------------------------------
+    // ** Image Slideshow **
+
+    // variables
+    var images = ["assets/images/babirusa.jpg", "assets/images/blackdevil.jpg", "assets/images/banteg.jpg", "assets/images/bluebird.jpg", "assets/images/bison.jpg", "assets/images/bobcat.jpg"];
+
+    var imageScroll;
+
+    var imageCount = 0;
+
+    // functions
+    function showImage() {
+        $("#image-holder").html("<img src=" + images[imageCount] + " width='300px'>");
+        console.log("i'm showing the first image");
+    }
+
+    function nextImage() {
+        imageCount++;
+
+        setTimeout(startScroll, 1000);
+
+        if (imageCount === images.length) {
+            imageCount = 0;
+        }
+    }
+
+    function startScroll() {
+        imageScroll = setInterval(nextImage, 1000);
+        console.log("why am i not working?");
+    }
+
+    showImage();
+
+    // ----------------------------------
 }); //end document ready
