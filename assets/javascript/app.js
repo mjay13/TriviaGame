@@ -112,6 +112,9 @@ $(document).ready(function() {
     // $("#remainingTime").append("remaining time: " + time);
     // console.log(setTimeout);
 
+    // also set the submit button to stop the timer and show results
+    // use modal to show results when timer is up or submit is clicked?
+
 
     // timeUp()
 
