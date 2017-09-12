@@ -3,3 +3,20 @@ body {
     background-repeat: repeat;
 }
 
+#image-holder {
+	margin: 30px;
+
+}
+
+img {
+	border-radius: 5px;
+}
+
+.Jumbotron {
+	margin: 20px;
+}
+
+footer {
+	margin: 20px;
+	text-align: center;
+}

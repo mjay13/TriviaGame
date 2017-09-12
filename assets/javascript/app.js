@@ -130,13 +130,13 @@ $(document).ready(function() {
     // functions
     function showImage() {
         $("#image-holder").html("<img src=" + images[imageCount] + " width='300px'>");
-        console.log("i'm showing the first image");
+        // console.log("i'm showing the first image");
     }
 
     function nextImage() {
         imageCount++;
 
-        setTimeout(startScroll, 1000);
+        setTimeout(showImage, 1000);
 
         if (imageCount === images.length) {
             imageCount = 0;
@@ -144,11 +144,12 @@ $(document).ready(function() {
     }
 
     function startScroll() {
-        imageScroll = setInterval(nextImage, 1000);
-        console.log("why am i not working?");
+        imageScroll = setInterval(nextImage, 500);
+       
     }
 
     showImage();
+    startScroll();
 
     // ----------------------------------
 }); //end document ready
