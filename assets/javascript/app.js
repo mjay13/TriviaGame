@@ -148,6 +148,10 @@ $(document).ready(function() {
        
     }
 
+    $("#image-holder").on("click", function() {
+    	clearInterval(imageScroll);
+    });
+
     showImage();
     startScroll();
 
