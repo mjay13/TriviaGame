@@ -21,6 +21,10 @@ footer {
 	text-align: center;
 }
 
+.well-lg {
+	background-color: #e5e0d5;
+}
+
 .well-sm {
 	background-color: #fff;
 }

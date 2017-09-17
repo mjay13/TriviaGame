@@ -100,7 +100,6 @@ $(document).ready(function() {
     //          $("#remainingTime").append("<h2>your time is up!</h2>");
     //		}
 
-    //car and animal gifs on rotating loop
     // __________________________________
     // ** Game Logic **
 
@@ -112,7 +111,7 @@ $(document).ready(function() {
     // $("#remainingTime").append("remaining time: " + time);
     // console.log(setTimeout);
 
-    // also set the submit button to stop the timer and show results
+    // also set the submit button to stop the timer and show results // or no submit button?
     // use modal to show results when timer is up or submit is clicked?
 
 
