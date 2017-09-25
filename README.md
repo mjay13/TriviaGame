@@ -1,5 +1,10 @@
 # TriviaGame
 
 
-view here: https://mjay13.github.io/TriviaGame/
 
+
+
+
+
+
+2017 Megan M Jacobs
