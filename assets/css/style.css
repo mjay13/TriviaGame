@@ -1,6 +1,36 @@
 body {
     background-image: url("../../assets/images/topography.png");
     background-repeat: repeat;
+    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	margin: 20px;
+	text-align: center;
+	
+}
+
+h1 {
+	font-size: 50px;
+}
+
+img {
+	border-radius: 5px;
+}
+
+.btnSection {
+	margin-top: 100px;
+}
+
+.col-md-3 {
+	margin-top: 20px;
+}
+
+.container {
+ flex: 1;
+
 }
 
 #image-holder {
@@ -8,27 +38,10 @@ body {
 
 }
 
-img {
-	border-radius: 5px;
-}
-
-.Jumbotron {
-	margin: 20px;
-}
-
-footer {
-	margin: 20px;
+.titleSection {
+	align-self: center;
 	text-align: center;
+	margin: 60px;
 }
 
-.well-lg {
-	background-color: #e5e0d5;
-}
 
-.well-sm {
-	background-color: #fff;
-}
-
-label {
-	margin: 10px;
-}
