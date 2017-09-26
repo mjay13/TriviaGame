@@ -1,11 +1,16 @@
 // user does nothing but click on the answer radio buttons, all else should go using functions and timers
 
 $(document).ready(function() {
+    $("#questionScreen").hide();
 
     // __________________________________
     // ** Variables **
-
-    //remainingTime 
+    
+    // counters
+    var correctCounter = 0;
+    var incorrectCounter = 0;
+    var unansweredCounter = 0;
+    var currentQuestion = 0;
 
     // trivia object with questions and answers contained within
     var trivia = [
@@ -62,36 +67,14 @@ $(document).ready(function() {
     ];
 
 
-
-    // var for right answers
-
-    // var for questions
-
-    // var for wrong answers
-
-    // empty array for right answers
-
-    // empty array for wrong answers
-
-    // unanswered questions?
-
     // __________________________________
     // ** Functions **
 
-    // on document loading, start timer
 
 
-    // what happens when a radio button is clicked, store the information
 
-    // timeup
 
-    // show stored answers as how many were 1: correct, 2: how many were incorrect, and 3: how many were not answered
-
-    // push right answers to right array
-
-    // push wrong answers to wrong array
-
-    // how to record unanswered questions? if not aswered, push to unanswered quetion array?
+ 
 
     // function timeUp() {
 
@@ -103,19 +86,18 @@ $(document).ready(function() {
     // __________________________________
     // ** Game Logic **
 
-    // start timer()
-    // var time = 30;
+    // on click of play, start game
+    $("#playBtn").on("click", function() {
+        $("#btnSection").hide();
+        $("#image-holder").hide();
+        $("#countdown").append("<h2 id='tSeconds'>00</h2>");
+        $("#questionScreen").show();
 
-    // setTimeout(time, 30 * 1000);
-    // time--;
-    // $("#remainingTime").append("remaining time: " + time);
-    // console.log(setTimeout);
+        console.log("start button clicked");
 
-    // also set the submit button to stop the timer and show results // or no submit button?
-    // use modal to show results when timer is up or submit is clicked?
+        //playTrivia();
 
-
-    // timeUp()
+    });
 
     // ----------------------------------
 
@@ -131,7 +113,7 @@ $(document).ready(function() {
 
     // functions
     function showImage() {
-        $("#image-holder").html("<img src=" + images[imageCount] + " width='300px'>");
+        $("#image-holder").html("<img src=" + images[imageCount] + " width='225px'>");
         // console.log("i'm showing the first image");
     }
 

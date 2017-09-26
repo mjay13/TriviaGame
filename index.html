@@ -19,30 +19,73 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/javascript/app.js">
     </script>
+    <link rel="icon" type="image/png" href="assets/images/owl-favicon.png">
     <title>Car Name Game!</title>
 </head>
 
 <body>
     <div class="container">
-        <!--Jumbotron to fit everything inside -->
-        <div class="titleSection">
+        <!--Beginning Screen -->
+        <div class="titleSection" id="beginScreen">
             <h1>Car Name Trivia Game!</h1>
-            <p class="lead">Out of these animals, each starting with the letter 'B',
-                <br> which ones have been used to name cars?</p>
-                <div class="row btnSection">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3">
-                        <button class="btn btn-sm btn-default">Play</button>
-                    </div>
-                    <div class="col-md-3">
-                        <button class="btn btn-sm btn-default">How-to</button>
-                    </div>
-                    <div class="col-md-3"></div>
+            
+            <!-- buttons -->
+            <div class="row" id="btnSection">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <button id="playBtn" class="btn btn-sm btn-default">Play</button>
                 </div>
+                <div class="col-md-3">
+                    <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#howToModal">How-to</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <!-- image scroll -->
+            <div>
+                <div id="image-holder"></div>
+            </div>
+            <!-- End of Beginning Screen -->
+        </div>
+        <!-- Questions -->
+        <div class="questionSection" id="questionScreen">
+            <div class="row">
+                <div class="col-sm-12" id="countdown">
+                    <!-- time here -->
+                </div>
+            </div>
+            <div class="row">
+                <div id="questionName" class="col-sm-12 center-align">
+                    <!-- name in question shown -->
+                </div>
+            </div>
+            <div class="row">
+                <div id="answerOptions" class="col-sm-8 offset-s2 center-align">
+                    <!-- true/false here -->
+                </div>
+            </div>
+            <!-- End of Questions -->
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- Modal for How-To -->
+    <div id="howToModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">How to Play</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Out of the animals given, each starting with the letter 'B', which ones have been used to name cars?</p>
+                    <p>Press the PLAY button to start the quiz. You have 9 seconds to answer each question. When you're done your score will be displayed.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Modals -->
-    <!-- Footer? -->
+    <!-- Footer -->
     <footer>
         <p>2017 Megan M Jacobs</p>
     </footer>
